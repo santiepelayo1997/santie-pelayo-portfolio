@@ -30,6 +30,8 @@ const technologies = [
   { name: "Mysql", icon: "/icons/mysql.svg" },
   { name: "Xampp", icon: "/icons/xampp.svg" },
   { name: "Visual Studio Code", icon: "/icons/vscode.svg" },
+  { name: "Zustand", icon: "/icons/zustand.svg" },
+  { name: "Supabase", icon: "/supabase.png" },
 ]
 
 export default function SkillsSection() {
