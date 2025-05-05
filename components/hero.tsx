@@ -11,42 +11,12 @@ export default function Hero() {
   const fullText = "Front End Developer"
   const typingSpeed = 150
 
-//   const slideIn = (direction, type, delay, duration) => {
-//     return {
-//       initial: { rotate: 0 },
-//       animate: {
-//         rotate: [0, 14, -8, 14, -4, 10, 0],
-//         transition: {
-//           duration: 2.5,
-//           ease: "easeInOut",
-//           repeat: Number.POSITIVE_INFINITY,
-//           repeatType: "loop",
-//           repeatDelay: 1,
-//         },
-//       },
-//     };
-// };
-  const waveAnimation = {
-    initial: { rotate: 0 },
-    animate: {
-      rotate: [0, 14, -8, 14, -4, 10, 0],
-      transition: {
-        duration: 2.5,
-        ease: "easeInOut",
-        repeat: Number.POSITIVE_INFINITY,
-        repeatType: "loop",
-        repeatDelay: 1,
-      },
-    },
-  }
-
   function handleDownloadCv() {
     const link = document.createElement("a");
     link.href = "/Santie-Pelayo-Resume.pdf"; 
     link.download = "Santie_Pelayo_Resume.pdf";
     link.click();
   }
-
 
   useEffect(() => {
     if (typedText.length < fullText.length) {
