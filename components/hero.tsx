@@ -66,12 +66,12 @@ export default function Hero() {
                 >
                   👋
                 </motion.span> 
-                I'm{" "} Santie Pelayo
+                I&apos;m{" "} Santie Pelayo
             </div>
 
             <div className="flex items-center justify-center gap-2 text-2xl md:text-3xl font-medium text-foreground/80">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center">
-                I'm a <span className="bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text animate-gradient"> front-end developer.</span> <br></br>Turning caffeine into  <span className="bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text animate-gradient"> components</span>  and bugs into  <span className="bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text animate-gradient"> features.</span>
+                I&apos;m a <span className="bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text animate-gradient"> front-end developer.</span> <br></br>Turning caffeine into  <span className="bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text animate-gradient"> components</span>  and bugs into  <span className="bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text animate-gradient"> features.</span>
               </h1>
             </div>
 

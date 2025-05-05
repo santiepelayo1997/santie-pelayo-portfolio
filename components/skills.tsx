@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { useTheme } from "next-themes"
+import Image from "next/image"
 
 const technologies = [
   { name: "HTML5", icon: "/icons/html5.svg" },
@@ -126,7 +127,7 @@ function TechCard({
         animate={{ opacity: isHovered ? 0 : 1 }}
         transition={{ duration: 0.2 }}
       >
-        <img src={icon || "/placeholder.svg"} alt={name} className="w-12 h-12 object-contain" />
+        <Image src={icon || "/placeholder.svg"} width={50} height={50} alt={name} className="w-12 h-12 object-contain" />
       </motion.div>
 
       <motion.div
