@@ -11,6 +11,21 @@ export default function Hero() {
   const fullText = "Front End Developer"
   const typingSpeed = 150
 
+//   const slideIn = (direction, type, delay, duration) => {
+//     return {
+//       initial: { rotate: 0 },
+//       animate: {
+//         rotate: [0, 14, -8, 14, -4, 10, 0],
+//         transition: {
+//           duration: 2.5,
+//           ease: "easeInOut",
+//           repeat: Number.POSITIVE_INFINITY,
+//           repeatType: "loop",
+//           repeatDelay: 1,
+//         },
+//       },
+//     };
+// };
   const waveAnimation = {
     initial: { rotate: 0 },
     animate: {
@@ -56,14 +71,20 @@ export default function Hero() {
            
             
             <div className="sm:text-[1rem] md:text-[1.5rem] py-[9px] px-8 w-fit font-semibold rounded-3xl bg-[#0001] dark:bg-[#fff1] mb-10">
-
               Kumusta!
-                <motion.span
-                  className="inline-block origin-bottom-right mr-1"
-                  initial="initial"
-                  animate="animate"
-                  variants={waveAnimation}
-                >
+                <motion.span 
+                  className="inline-block origin-bottom-right mr-1" 
+                  initial="initial"  
+                  animate={{
+                    rotate: [0, 14, -8, 14, -4, 10, 0],
+                    transition: {
+                      duration: 2.5,
+                      ease: "easeInOut",
+                      repeat: Number.POSITIVE_INFINITY,
+                      repeatType: "loop",
+                      repeatDelay: 1,
+                    },
+                }}>
                   👋
                 </motion.span> 
                 I&apos;m{" "} Santie Pelayo
