@@ -60,7 +60,7 @@ export default function ContactSection() {
                 </svg>
               </div>
               <div>
-                <p className="text-gray-400 text-sm">Send me an email: test</p>
+                <p className="text-gray-400 text-sm">Send me an email:</p>
                 <p className="text-foreground/80 dark:text-foreground/80 group-hover:text-blue-400 transition-colors">
                   santiepelayo@gmail.com
                 </p>
