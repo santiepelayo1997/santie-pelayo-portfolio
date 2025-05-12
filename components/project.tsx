@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { Card, CardDescription, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import Image from "next/image"
-import { motion } from "framer-motion"
-import { useScrollAnimation } from "@/app/hooks/useScrollAnimation"
-import { cn } from "@/lib/utils"
+import { Card, CardDescription, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { useScrollAnimation } from "@/app/hooks/useScrollAnimation";
+import { cn } from "@/lib/utils";
 
 const projects = [
   {
@@ -13,7 +13,13 @@ const projects = [
     description:
       "An AI-powered chatbot that provides information about projects, skills, and services offered, enhancing user experience and engagement powered by Google Gemini 2.0.",
     image: "/chatwithsantie.png",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Google Gemini 2.0", "Aceternity UI"],
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Google Gemini 2.0",
+      "Aceternity UI",
+    ],
     demoUrl: "#",
     githubUrl: "#",
   },
@@ -35,10 +41,10 @@ const projects = [
     demoUrl: "#",
     githubUrl: "#",
   },
-]
+];
 
 export default function Projects() {
-  const { ref, isInView } = useScrollAnimation(0.2)
+  const { ref, isInView } = useScrollAnimation(0.2);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -48,7 +54,7 @@ export default function Projects() {
         staggerChildren: 0.2,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { y: 50, opacity: 0 },
@@ -61,7 +67,7 @@ export default function Projects() {
         damping: 12,
       },
     },
-  }
+  };
 
   return (
     <section id="projects" className="py-20">
@@ -73,17 +79,14 @@ export default function Projects() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7 }}
         >
-         <div className="mb-16 md:max-w-5xl md:mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-1 flex items-center text-foreground/80">
-            Projects<span className="text-blue-500">.</span>
-          </h2>       
-            <h3
-              className="text-md mb-8 text-muted-foreground text-left"
-            >
-                Here are some of my recent projects.
+          <div className="mb-16 md:max-w-5xl md:mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-1 flex items-center text-foreground/80">
+              Projects<span className="text-blue-500">.</span>
+            </h2>
+            <h3 className="text-md mb-8 text-muted-foreground text-left">
+              Here are some of my recent projects.
             </h3>
-        </div>
-     
+          </div>
         </motion.div>
 
         <motion.div
@@ -94,16 +97,25 @@ export default function Projects() {
           animate={isInView ? "visible" : "hidden"}
         >
           {projects.map((project, index) => {
-            const isEven = index % 2 === 0
+            const isEven = index % 2 === 0;
 
             return (
               <motion.div key={index} variants={itemVariants}>
                 <Card className="overflow-hidden border-none shadow-lg py-0">
-                  <div className={cn("flex flex-col md:flex-row", !isEven && "md:flex-row-reverse")}>
+                  <div
+                    className={cn(
+                      "flex flex-col md:flex-row",
+                      !isEven && "md:flex-row-reverse"
+                    )}
+                  >
                     <div className="md:w-1/2 p-6 flex flex-col justify-between">
                       <div>
-                        <CardTitle className="max-sm:!text-md text-lg mb-2 text-foreground/80">{project.title}</CardTitle>
-                        <CardDescription className="text-base mb-4 max-sm:text-sm">{project.description}</CardDescription>
+                        <CardTitle className="max-sm:!text-md text-lg mb-2 text-foreground/80">
+                          {project.title}
+                        </CardTitle>
+                        <CardDescription className="text-base mb-4 max-sm:text-sm">
+                          {project.description}
+                        </CardDescription>
 
                         <div className="flex flex-wrap gap-2 mb-6 max-sm:mb-2">
                           {project.tags.map((tag, tagIndex) => (
@@ -129,7 +141,12 @@ export default function Projects() {
                     </div>
 
                     <div className="md:w-1/2 relative h-64 md:h-auto">
-                      <div className={cn("h-full w-full relative overflow-hidden max-sm:mt-2 mt-8 shadow-2xl rounded-lg -right-10 transition-transform duration-500 hover:scale-105", !isEven && "-left-10")}>
+                      <div
+                        className={cn(
+                          "h-full w-full relative overflow-hidden max-sm:mt-2 mt-8 shadow-2xl rounded-lg -right-10 transition-transform duration-500 hover:scale-105",
+                          !isEven && "-left-10"
+                        )}
+                      >
                         <Image
                           src={project.image || "/placeholder.svg"}
                           alt={project.title}
@@ -141,10 +158,10 @@ export default function Projects() {
                   </div>
                 </Card>
               </motion.div>
-            )
+            );
           })}
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
